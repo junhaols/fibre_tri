@@ -1,0 +1,12 @@
+function g_sorting_fibre_tri_multi(Subject_path,Subject_IDs,Result_Name)
+
+
+'/data/disk2/luojunhao/test0918/subject/100307/100307_TEST_2MM_0927_tck2'
+
+if stramp(Subject_IDs,'All') || stramp(Subject_IDs,'all') || 
+    result=g_ls([Subject_path,'/*/','*',Result_Name,'*']);
+    for j=1:length(result)
+        result_path=result{j}   
+        fibre_tri=g_sorting_fibre_tri(result_path);
+    end
+end
